@@ -8,13 +8,12 @@ public class hangman
     public static boolean gameOver = false;
     public static char [] correctChars;
     public static int correctCharsCount=0;
-    
+
     //Main method
     public static void main(String[] args) 
     {
         while(!gameOver)
         {
-            System.out.println("Welcome to Hangman!");
             generateWord();
             gameLogic();
             System.out.println("Do you want to play again? (y/n)");
@@ -24,7 +23,6 @@ public class hangman
                 gameOver = true;
                 System.out.println("Thanks for playing!");
             }else{
-                System.out.print("\033\143");
                 gameOver = false;
                 lives = 6;
                 correctCharsCount = 0;
@@ -39,9 +37,7 @@ public class hangman
         char guess;
         while(true && lives > 0 && !gameOver)
         {
-            System.out.print("Guess a letter: ");
             guess=sc.next().charAt(0);
-            System.out.print("\033\143");
             if(wordToGuess.toLowerCase().contains(guess+""))
             {
                     System.out.println("Correct!");
@@ -78,8 +74,8 @@ public class hangman
                 System.out.print("_");
             }
         }
-        System.out.println("\n");
-     
+        System.out.println("");
+        
         if(correctCharsCount==wordToGuess.length())
         {
             System.out.println("You won!");
@@ -167,6 +163,5 @@ public class hangman
                 System.out.println("|_________");
                 break;
         }
-        System.out.println("");
     }
 }
