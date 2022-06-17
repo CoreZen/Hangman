@@ -99,7 +99,6 @@ public class hangman
      wordToGuess=wordlist[(int) (Math.random() * wordlist.length)];
      correctChars= new char[wordToGuess.length()];
     }
-   
    // prints the hangman 
     public static void printHangman(int state)
     {
