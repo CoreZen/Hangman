@@ -20,7 +20,7 @@ public class hangman {
             generateWord();
             gameLogic();
             System.out.println("Do you want to play again? (y/n)");
-            char answer = sc.next().charAt(0);
+            char answer = Character.toLowerCase(sc.next().charAt(0));
             if (answer == 'n') {
                 gameOver = true;
                 System.out.println("Thanks for playing!");
@@ -77,7 +77,7 @@ public class hangman {
      */
     static char input() {
         System.out.println("Guess a letter: ");
-        char guess = sc.next().charAt(0);
+        char guess = Character.toLowerCase(sc.next().charAt(0));
         if (whitelist.matcher(guess + "").matches()) {
             if ((new String(wrongGuessedChars)).contains(guess + "") || (new String(correctChars)).contains(guess + "")) {
                 System.out.println("You already guessed that letter!");
