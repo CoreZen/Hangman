@@ -62,9 +62,18 @@ public class hangman {
             printHangman(lives);
             characterToShow();
             if (correctCharsCount == wordToGuess.length()) {
-                System.out.println("You won!");
+                System.out.print("\033\143");
+                System.out.println("/////////");
+                System.out.println("|  YOU  |");
+                System.out.println("|  WON  |");
+                System.out.println("/////////");
                 gameOver = true;
             } else if (lives == 0) {
+                System.out.print("\033\143");
+                System.out.println("/////////");
+                System.out.println("|  YOU  |");
+                System.out.println("|  LOST |");
+                System.out.println("/////////");
                 System.out.println("You lost! The word is: " + wordToGuess);
                 gameOver = true;
             }
