@@ -72,9 +72,9 @@ public class hangman {
                 System.out.print("\033\143");
                 System.out.println("/////////");
                 System.out.println("|  YOU  |");
-                System.out.println("|  LOST |");
+                System.out.println("|  LOSE |");
                 System.out.println("/////////");
-                System.out.println("You lost! The word is: " + wordToGuess);
+                System.out.println("The word is: " + wordToGuess);
                 gameOver = true;
             }
         }
